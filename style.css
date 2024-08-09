@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: azure;
+}
+html {
+  overflow: scroll;
+}
+body {
+  background: #000;
+  width: 100%;
+  min-height: 100vh;
+}
+.demo {
+  background: rgba(255, 255, 255, 0.1);
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.demo2 {
+  background: rgba(0, 153, 255, 0.281);
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  margin-top: 3em;
+}
+/* .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+. */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  width: 80%;
+  margin-bottom: 1em;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 1em;
+}
+.checkbox {
+  display: none;
+}
+.label {
+  /* background-color: rgb(100, 100, 100); */
+  display: block;
+  line-height: 2em;
+  font-size: 2em;
+  padding: 0 1em;
+  /* border-radius: 1em; */
+  user-select: none;
+  border-bottom: 2px solid rgba(139, 139, 139, 0);
+  transition: 0.5s;
+}
+.label::after {
+  content: "";
+  display: inline-block;
+  background: url("imgs/arrow.png") no-repeat;
+  background-size: contain; /* or specify a size like '50% 50%' */
+  width: 20px; /* Set your desired width */
+  height: 20px; /* Set your desired height */
+  margin-left: 60%;
+  filter: invert(1);
+  transition: 0.3s;
+}
+.container .checkbox:checked + label::after {
+  transform: rotate(180deg);
+}
+.description {
+  padding: 0 1em;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+/* .label:checked ~ .description {
+  height: 300em;
+  overflow: visible;
+} */
+
+.container .checkbox:checked + label + .description {
+  max-height: 1200px;
+  padding: 1em;
+}
+.container .checkbox:checked ~ label {
+  border-bottom: 2px solid rgba(139, 139, 139, 1);
+}
